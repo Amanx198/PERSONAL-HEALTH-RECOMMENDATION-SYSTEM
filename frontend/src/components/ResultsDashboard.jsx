@@ -1,5 +1,6 @@
-import React from 'react';
-import { Target, Droplets, Utensils, Activity, AlertTriangle, ArrowLeft } from 'lucide-react';
+import React, { useState } from 'react';
+import { Target, Droplets, Utensils, Activity, AlertTriangle, ArrowLeft, Calendar, Flame, Dumbbell } from 'lucide-react';
+import DietPlan from './DietPlan';
 
 const ResultsDashboard = ({ data, onBack }) => {
   if (!data) return null;
@@ -161,6 +162,11 @@ const ResultsDashboard = ({ data, onBack }) => {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* 7-Day Diet Plan Selector */}
+      <div className="mt-8">
+        <DietPlan />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from models.schemas import UserProfile, RecommendationsResponse
 from core.health_logic import calculate_bmi, get_bmi_category, calculate_bmr, calculate_tdee, get_recommendations
 from ml.predictor import predict_health_risk
+from core.ai_generator import generate_advanced_plans
 
 app = FastAPI(title="Personal Health Recommendation System")
 
@@ -20,7 +21,7 @@ def read_root():
     return {"message": "Welcome to the Personal Health Recommendation System API"}
 
 @app.post("/api/recommendations", response_model=RecommendationsResponse)
-def get_health_recommendations(profile: UserProfile):
+async def get_health_recommendations(profile: UserProfile):
     try:
         bmi = calculate_bmi(profile.height_cm, profile.weight_kg)
         category = get_bmi_category(bmi)
@@ -43,6 +44,14 @@ def get_health_recommendations(profile: UserProfile):
             activity_level=profile.activity_level
         )
         
+        # Generate Advanced AI Plans
+        advanced_meals, advanced_workouts = await generate_advanced_plans(
+            profile=profile,
+            target_calories=recs["target_calories"],
+            macros=recs["macronutrients"],
+            goal=recs["goal"]
+        )
+        
         return RecommendationsResponse(
             bmi=bmi,
             bmi_category=category,
@@ -52,9 +61,12 @@ def get_health_recommendations(profile: UserProfile):
             macronutrients=recs["macronutrients"],
             water_liters=recs["water_liters"],
             exercise_plan=recs["exercise_plan"],
+            meal_plan=[],
             tips=recs["tips"],
             health_risk_prediction=risk_category,
-            obesity_risk_prob=round(risk_prob, 2)
+            obesity_risk_prob=round(risk_prob, 2),
+            advanced_meal_plan=advanced_meals,
+            advanced_workout_plan=advanced_workouts
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

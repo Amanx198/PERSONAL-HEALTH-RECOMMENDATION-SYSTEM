@@ -29,9 +29,15 @@ The system operates through a seamless integration of a high-performance fronten
 - The backend compiles all analytical data and AI predictions into a single JSON response.
 - The frontend parses this data and presents the user with a beautifully designed dashboard showing their target weight range, daily calorie goal, hydration needs, macro breakdown, custom exercise plan, and their AI-generated risk assessment score.
 
+### Step 5: Interactive Dietary Planning
+- After reviewing their health and macroeconomic analysis, the user interacts with an intuitive selection tool to state their dietary preference (Vegetarian or Non-Vegetarian).
+- Based on this selection, the system dynamically renders a full, 7-Day Diet Plan complete with specific recipes for Breakfast, Lunch, and Dinner.
+- Each meal includes a precise macro breakdown (Calories, Protein, Carbohydrates, and Fats) tailored to align with their calculated TDEE and health goals.
+
 ## 3. Core Benefits & Impact
 
 - **Hyper-Personalization**: Advice is tailored specifically to the individual's body metrics and lifestyle, avoiding a one-size-fits-all approach.
+- **Interactive Dietary Customization**: The system allows users to select between Vegetarian and Non-Vegetarian diets, generating detailed 7-day meal plans with full macro breakdowns and recipes that match their preferences.
 - **Preventative Healthcare**: The ML risk assessment acts as an early warning system for metabolic issues, encouraging preventative lifestyle changes before conditions worsen.
 - **Scientifically Grounded**: Diet and exercise goals are based on verified nutritional science and globally accepted medical equations, ensuring safety and accuracy.
 - **Exceptional User Experience**: The UI is fast, responsive, and engaging. Built with modern design principles (glassmorphism, subtle animations), it keeps users motivated to track their health.

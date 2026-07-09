@@ -43,11 +43,20 @@ Step 4: Personalized Dashboard Delivery (Frontend)
   target weight range, daily calorie goal, hydration needs, macro breakdown, 
   custom exercise plan, and their AI-generated risk assessment score.
 
+Step 5: Interactive Dietary Planning
+- At the bottom of the dashboard, users select their preference (Vegetarian or 
+  Non-Vegetarian). The system then instantly generates a detailed 7-Day Diet 
+  Plan featuring full recipes and macro breakdowns (Calories, Protein, Carbs, 
+  Fats) tailored to their calculated daily needs.
+
 
 3. WHAT ARE THE BENEFITS
 --------------------------------------------------------------------------------
 - Hyper-Personalization: Advice is tailored to the individual's specific body 
   metrics and activity level, not a one-size-fits-all approach.
+- Interactive Dietary Customization: Generates detailed 7-day meal plans based 
+  on a user's Vegetarian or Non-Vegetarian preference, complete with recipes 
+  and daily macro counts.
 - Preventative Healthcare: The ML risk assessment acts as an early warning 
   system for metabolic issues, encouraging preventative lifestyle changes.
 - Scientifically Grounded: Diet and exercise goals are based on verified 
