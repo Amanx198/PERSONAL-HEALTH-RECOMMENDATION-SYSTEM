@@ -13,7 +13,8 @@ function App() {
     setIsLoading(true);
     setError('');
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/recommendations', profileData);
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+      const response = await axios.post(`${apiUrl}/api/recommendations`, profileData);
       setResults(response.data);
     } catch (err) {
       setError(err.response?.data?.detail || 'An error occurred while fetching recommendations. Please ensure the backend is running.');
