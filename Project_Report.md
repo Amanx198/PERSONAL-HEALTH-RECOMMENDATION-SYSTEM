@@ -79,3 +79,4 @@ The current architecture lays a strong foundation for future scalability. Planne
 - **Wearable Tech Synchronization**: Integrate with Apple Health or Google Fit APIs to pull live activity and biometric data automatically.
 - **Expanded ML Models**: Train Deep Learning models on larger datasets to predict more specific conditions like Type 2 Diabetes or Cardiovascular Disease.
 - **Mobile Application**: Wrap the frontend logic in React Native for native iOS and Android deployment.
+  
