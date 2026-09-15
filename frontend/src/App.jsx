@@ -84,7 +84,7 @@ function App() {
             </svg>
           </a>
         </div>
-        <p className="text-center text-slate-500 text-sm font-medium">&copy; 2025 Aman Sharma. Built with Netflix vibes.</p>
+        <p className="text-center text-slate-500 text-sm font-medium">&copy; Built by Aman Sharma. Student at Punjabi Uiversity, Patiala</p>
       </footer>
     </div>
   );
